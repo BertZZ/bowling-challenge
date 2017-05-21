@@ -27,4 +27,10 @@ describe("Game", function() {
     expect(game.frameNumber).toEqual(2)
     expect(game.gameScore).toEqual(8)
   })
+  it("Can end a Game", function(){
+    game.frameNumber = 11
+    game.newFrame()
+    game.saveFrame()
+    expect(game.frameNumber).toEqual(11)
+  })
 })
