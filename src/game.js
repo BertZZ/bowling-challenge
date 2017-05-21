@@ -1,7 +1,7 @@
 function Game (){
   this.frame = undefined
   this.frames = []
-  this.frameNumber = frames.length + 1
+  this.frameNumber = 1
   this.gameScore = 0
 }
 
@@ -10,6 +10,7 @@ Game.prototype.newFrame = function(){
 }
 
 Game.prototype.saveFrame = function(){
-  this.gameScore = this.gameScore + game.frame.totalScore
-  this.frames.push(game.frame)
+  this.gameScore = this.gameScore + this.frame.totalScore
+  this.frames.push(this.frame)
+  this.frameNumber++
 }

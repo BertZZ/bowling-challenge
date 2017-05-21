@@ -18,14 +18,13 @@ describe("Game", function() {
 
   it("Can save a frame", function(){
     game.newFrame()
-    console.log(game.frame)
     game.frame.ball1(4)
     game.frame.ball2(4)
     game.frame.score()
     game.frame.update()
     game.saveFrame()
     expect(game.frames).not.toEqual([])
-    expect(this.frameNumber).toEqual(2)
-    expect(this.gameScore).toEqual(8)
+    expect(game.frameNumber).toEqual(2)
+    expect(game.gameScore).toEqual(8)
   })
 })
