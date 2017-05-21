@@ -10,11 +10,22 @@ describe("Game", function() {
   })
 
   it("Starts with an empty array of scores" , function(){
-    expect(game.scores).toEqual([])
+    expect(game.frames).toEqual([])
+  })
+  it("Starts with a score of 0", function(){
+    expect(game.gameScore).toEqual(0)
   })
 
-  it("Starts on Frame 1", function(){
-    expect(game.frame).toEqual(1)
+  it("Can save a frame", function(){
+    game.newFrame()
+    console.log(game.frame)
+    game.frame.ball1(4)
+    game.frame.ball2(4)
+    game.frame.score()
+    game.frame.update()
+    game.saveFrame()
+    expect(game.frames).not.toEqual([])
+    expect(this.frameNumber).toEqual(2)
+    expect(this.gameScore).toEqual(8)
   })
-
 })
