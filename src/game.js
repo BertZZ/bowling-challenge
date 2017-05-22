@@ -24,8 +24,8 @@ Game.prototype.play = function(){
     this.newFrame()
     this.frame.ball1(Math.floor(Math.random() * 11))
     this.frame.ball2(Math.floor(Math.random() * (11 - this.frame.ball1Score)))
-    this.frame.score()
     this.frame.update()
+    this.frame.score()
     this.saveFrame()
   }
 }

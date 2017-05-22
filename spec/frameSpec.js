@@ -49,5 +49,4 @@ describe("Frame", function() {
     frame.score()
     expect(frame.totalScore).toEqual(9)
   })
-
 })
